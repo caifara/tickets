@@ -8,7 +8,7 @@
 # set :cron_log, "/path/to/my/cron_log.log"
 #
 
-path = File.expand_path(File.dirname(__FILE__) + '/../bin/tickets')
+path = File.expand_path(File.dirname(__FILE__) + '/bin/tickets')
 
 every 2.hours do
   command "#{path} growl"
