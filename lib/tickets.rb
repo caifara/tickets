@@ -7,8 +7,6 @@ require "ruby-debug"
 
 require File.expand_path("#{ROOT}/lib/tickets/core")
 
-OurTickets.read_config
-
 if $debug
   class ActiveResource::Connection
     # Creates new Net::HTTP instance for communication with

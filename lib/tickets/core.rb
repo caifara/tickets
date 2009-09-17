@@ -108,13 +108,19 @@ class OurTickets
   end
   
   def self.read_config
-    config_yaml = YAML.load(File.read("#{ENV['HOME']}/#{CONFIG_FILENAME}"))
+    begin
+      config_yaml = YAML.load(File.read("#{ENV['HOME']}/#{CONFIG_FILENAME}"))
     
-    Lighthouse.account  =  config_yaml["account"]
-    Lighthouse.token    =  config_yaml["token"]
-    Lighthouse.user_id  =  config_yaml["user_id"]
+      Lighthouse.account  =  config_yaml["account"]
+      Lighthouse.token    =  config_yaml["token"]
+      Lighthouse.user_id  =  config_yaml["user_id"]
 
-    $queries            =  config_yaml["queries"]
-    $debug              =  config_yaml["debug"]
+      $queries            =  config_yaml["queries"]
+      $debug              =  config_yaml["debug"]
+      
+    rescue Errno::ENOENT
+      puts "whoeps, you should run 'tickets setup' first ..."
+      exit
+    end
   end
 end

@@ -3,9 +3,9 @@ token:
 user_id: 
 
 queries:
-  - urgent: 
-    - q: "milestone:prioritair not-state:invalid not-state:resolved not-state:hold"
-  - something:
-    - q: "milestone:dringend not-state:invalid not-state:resolved not-state:hold"
+  urgent: 
+    q: "milestone:prioritair not-state:invalid not-state:resolved not-state:hold"
+  something:
+    q: "milestone:dringend not-state:invalid not-state:resolved not-state:hold"
     
 debug: false
