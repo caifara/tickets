@@ -5,12 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "tickets"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "ivo.dancet@gmail.com"
+    gem.summary = %Q{Stay up to date with urgent or important Lighthouse tickets}
+    gem.description = %Q{This gem queries lighthouse to get you lists of tickets which are important to you and show them through growl. You can set the queries yourself.}
+    gem.email = "ivo.dancet@by2.be"
     gem.homepage = "http://github.com/caifara/tickets"
     gem.authors = ["Ivo Dancet"]
-    gem.add_development_dependency "rspec"
+    gem.add_development_dependency ""
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError

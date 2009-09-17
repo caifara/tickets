@@ -1,6 +1,10 @@
 = tickets
 
-Description goes here.
+== Setup
+
+* You will have to get my lighthouse-api to get this working:
+  `sudo gem install caifara-lighthouse-api`
+* You will also need the growl gem
 
 == Note on Patches/Pull Requests
  
