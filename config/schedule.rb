@@ -13,7 +13,7 @@ path = File.expand_path(File.dirname(__FILE__) + '/bin/tickets')
 every 2.hours do
   command "#{path} growl"
 end
-
+#
 #
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"

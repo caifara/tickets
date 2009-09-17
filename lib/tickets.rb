@@ -1,11 +1,13 @@
+ROOT = File.dirname(__FILE__) + "/.."
+
 require "rubygems"
-require File.expand_path(File.dirname(__FILE__) + '/../vendor/lighthouse-api/lib/lighthouse')
+require "lighthouse-api"
 require "growl"
 require "ruby-debug"
 
-require File.expand_path(File.dirname(__FILE__) + '/tickets/core')
+require File.expand_path("#{ROOT}/lib/tickets/core")
 
-require File.expand_path(File.dirname(__FILE__) + '/../config/config')
+OurTickets.read_config
 
 if $debug
   class ActiveResource::Connection
@@ -24,4 +26,4 @@ if $debug
 end
 
 
-require File.expand_path(File.dirname(__FILE__) + '/tickets/cli')
+require File.expand_path("#{ROOT}/lib/tickets/cli")
