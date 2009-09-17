@@ -6,12 +6,20 @@ module Lighthouse
   end
   
   class Ticket
-    def to_growl(nr)
-      "#{nr} #{title[0..30]}..."
+    def to_growl(nr)      
+      "#{me_string}#{nr} #{title[0..30]}..."
     end
     
     def to_string_with_nr(nr)
-      "#{nr} #{title}"
+      "#{me_string}#{nr} #{title}"
+    end
+    
+    def me_string
+      if assigned_user_id == Lighthouse.user_id
+        return "> "
+      else
+        return ""
+      end
     end
   end
 end
